@@ -1,5 +1,18 @@
 <?php
 
+/*
+   ____                      ____        _           ______ _    
+  / __ \                    |  _ \      | |         |  ____| |   
+ | |  | |_ __ ___   ___ _ __| |_) | __ _| |__   __ _| |__  | | __
+ | |  | | '_ ` _ \ / _ \ '__|  _ < / _` | '_ \ / _` |  __| | |/ /
+ | |__| | | | | | |  __/ |  | |_) | (_| | |_) | (_| | |    |   < 
+  \____/|_| |_| |_|\___|_|  |____/ \__,_|_.__/ \__,_|_|    |_|\_\
+                                                                 
+                  *Pocketmine & Altay JoinMessage Plugin
+		  *Version 1.0
+		  *Plugin Language: Turkish
+*/
+
 namespace OmerBabaFk;
 
 use pocketmine\plugin\PluginBase;
