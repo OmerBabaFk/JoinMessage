@@ -31,12 +31,12 @@ class main  extends PluginBase implements Listener{
 	  public function onJoin(PlayerJoinEvent $event){
   		 $player = $event->getPlayer();
    		$name = $player->getName();
-   		$event->setJoinMessage("§7[§a+§7] §b$name §eSunucumuza Giriş Yaptı !");
+   		$event->setJoinMessage("§7[§a+Â§7] §b$name §eSunucumuza Giriş Yaptı !");
 	}
         public function onQuit(PlayerQuitEvent $event){
   		 $player = $event->getPlayer();
    		$name = $player->getName();
-   		$event->setQuitMessage("§7[§4-§7] §b$name §eSunucumuzdan ��k�� Yaptı !");
+   		$event->setQuitMessage("§7[§4-Â§7] §b$name Â§eSunucumuzdan Çıkış YaptÄ± !");
 	}
 
 }
