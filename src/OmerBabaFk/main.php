@@ -35,6 +35,9 @@ class main  extends PluginBase implements Listener{
                     $this->getLogger()->info("Eklenti Yükleniyor...");
           }
           public function onEnable(){
+                @mkdir($this->getDataFolder());
+                $this->saveResource("Config.yml");
+                $this->cfg = new Config($this->getDatatFolder()."config.yml", Config::YAML);
                     $this->getServer()->getPluginManager()->registerEvents($this,$this);
 		    $this->getLogger()->info("Eklenti Aktif...");
           }
@@ -43,12 +46,14 @@ class main  extends PluginBase implements Listener{
           }
 	  public function onJoin(PlayerJoinEvent $event){
   		 $player = $event->getPlayer();
-   		$name = $player->getName();
+                   $name = $player->getName();
+                   $this->cfg->save();
    		$event->setJoinMessage("§7[§a+Â§7] §b$name §eSunucumuza Giriş Yaptı !");
 	}
         public function onQuit(PlayerQuitEvent $event){
   		 $player = $event->getPlayer();
-   		$name = $player->getName();
+                   $name = $player->getName();
+                   $this->cfg->save();
    		$event->setQuitMessage("§7[§4-Â§7] §b$name Â§eSunucumuzdan Çıkış YaptÄ± !");
 	}
 
