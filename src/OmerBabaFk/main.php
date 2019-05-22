@@ -21,6 +21,8 @@ use pocketmine\event\player\PlayerJoinEvent;
 
 use pocketmine\event\player\PlayerQuitEvent;
 
+use pocketmine\utils\Config;
+
 use pocketmine\Player;
 
 use pocketmine\Server;
@@ -54,7 +56,7 @@ class main  extends PluginBase implements Listener{
   		 $player = $event->getPlayer();
                    $name = $player->getName();
                    $this->cfg->save();
-   		$event->setQuitMessage("§7[§4-Â§7] §b$name Â§eSunucumuzdan Çıkış YaptÄ± !");
+   		$event->setQuitMessage("§7[§4-Â§7] §b$name Â§eSunucumuzdan Çıkış Yaptı !");
 	}
 
 }
