@@ -59,7 +59,7 @@ class main  extends PluginBase implements Listener{
   		 $player = $event->getPlayer();
                    $name = $player->getName();
                    $this->cfg->set("cikis-mesaj", "Mesaj");
-                   $cikismesaj = $this->cfg->get("cikis-mesaj)
+                   $cikismesaj = $this->cfg->get("cikis-mesaj");
                    $this->cfg->save();
    		$event->setQuitMessage("$cikismesaj");
 	}
