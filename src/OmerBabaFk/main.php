@@ -47,16 +47,21 @@ class main  extends PluginBase implements Listener{
                     $this->getLogger()->info("Eklenti De-Aktif...");
           }
 	  public function onJoin(PlayerJoinEvent $event){
-  		 $player = $event->getPlayer();
-                   $name = $player->getName();
-                   $this->cfg->save();
-   		$event->setJoinMessage("§7[§a+Â§7] §b$name §eSunucumuza Giriş Yaptı !");
+                $player = $event->getPlayer();
+                $name = $player->getName();
+                $this->cfg->set("giris-mesaj", "Mesaj");
+                $girismesaj = $this->cfg->get("giris-mesaj");
+                $this->cfg->save();
+                $event->setJoinMessage("$girismesaj");
+         }
 	}
         public function onQuit(PlayerQuitEvent $event){
   		 $player = $event->getPlayer();
                    $name = $player->getName();
+                   $this->cfg->set("cikis-mesaj", "Mesaj");
+                   $cikismesaj = $this->cfg->get("cikis-mesaj)
                    $this->cfg->save();
-   		$event->setQuitMessage("§7[§4-Â§7] §b$name Â§eSunucumuzdan Çıkış Yaptı !");
+   		$event->setQuitMessage("$cikismesaj");
 	}
 
 }
